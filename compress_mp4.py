@@ -38,7 +38,7 @@ def compress_mp4_to_smaller_size(mp4_file_name, mp4_file_path):  # 输入为文�
     target_mp4_dir = os.path.join(target_dir, mp4_file_name)
     build_dir(target_mp4_dir)
     target_file_path = os.path.join(target_mp4_dir, mp4_file_name)
-    os.system('ffmpeg -i {0} -s 640x480 -b:v 500 -r 15 {1}'.format(mp4_file_path, target_file_path))
+    os.system('ffmpeg -i {0} -s 640x480 -b:v 500k -r 15 {1}'.format(mp4_file_path, target_file_path))
     #'640 X 480''码率500kbps''帧率15fps'
 
 
